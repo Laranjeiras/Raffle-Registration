@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.sorteio-info {
+    background-color: #f0f8ff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border-left: 4px solid #4a90e2;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #3a7bc8;
+}
+
+.mensagem {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.mensagem.sucesso {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.mensagem.erro {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Ajustes para formulário compacto */
+.form-compacto {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.quantidade-group {
+    max-width: 200px;
+    margin: 0 auto 20px auto;
+}
+
+/* Melhorias de responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        max-width: 100%;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    input, select {
+        padding: 12px 10px;
+        font-size: 16px; /* Evita zoom em iOS */
+    }
+    
+    .btn-submit {
+        padding: 14px;
+        font-size: 18px;
+    }
+    
+    .sorteio-info {
+        padding: 12px;
+        margin-bottom: 15px;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 12px;
+        border-radius: 6px;
+    }
+    
+    .form-group {
+        margin-bottom: 12px;
+    }
+    
+    label {
+        font-size: 14px;
+    }
+    
+    .btn-submit {
+        padding: 12px;
+    }
+}
+
+/* Otimizações para toque em dispositivos móveis */
+@media (hover: none) {
+    input, select, button {
+        min-height: 44px; /* Tamanho mínimo para alvos de toque */
+    }
+}
+
+/* Ajuste para linha de email e quantidade */
+.email-quantidade-row .email-group {
+    flex: 3; /* Email ocupa 3/4 do espaço */
+}
+
+.email-quantidade-row .quantidade-group {
+    flex: 1; /* Quantidade ocupa 1/4 do espaço */
+}
+
+/* Ajuste para o label de quantidade */
+.quantidade-group label {
+    white-space: nowrap;
+} 
